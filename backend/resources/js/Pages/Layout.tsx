@@ -1,14 +1,20 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Link } from '@inertiajs/inertia-react'
 
-export default function Layout({ children }) {
+interface Props {
+  children: React.ReactNode
+}
+
+const Layout: React.FC<Props> = (props: Props) => {
   return (
     <main>
       <header>
         <Link href="/">Home</Link>
         <Link href="/user">User</Link>
       </header>
-      <article>{children}</article>
+      <article>{props.children}</article>
     </main>
   )
 }
+
+export default Layout
