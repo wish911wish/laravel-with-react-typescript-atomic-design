@@ -11,6 +11,7 @@ const Layout: React.FC<Props> = (props: Props) => {
       <header>
         <Link href="/">Home</Link>
         <Link href="/user">User</Link>
+        <Link href="/user/create">User register</Link>
       </header>
       <article>{props.children}</article>
     </main>
