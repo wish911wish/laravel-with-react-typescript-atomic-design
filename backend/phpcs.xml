@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<ruleset name="PSR12/Laravel">
+    <description>PSR12 compliant rules and settings for Laravel</description>
+
+    <arg name="extensions" value="php" />
+
+    <!-- 適用コーディング規約の指定 -->
+    <rule ref="PSR12" />
+    <rule ref="Squiz.Commenting.FunctionComment">
+        <properties>
+            <property name="required" value="'@param', '@return'"/>
+        </properties>
+        <exclude name="Squiz.Commenting.FunctionComment.EmptyThrows"></exclude>
+        <exclude name="Squiz.Commenting.FunctionComment.MissingParamComment"></exclude>
+        <exclude name="Squiz.Commenting.FunctionComment.SpacingAfterParamType"></exclude>
+        <exclude-pattern>/tests/Feature</exclude-pattern>
+        <exclude-pattern>/tests/Unit</exclude-pattern>
+    </rule>
+
+    <!-- インデントはスペース、サイズは4 -->
+    <rule ref="Generic.WhiteSpace.ScopeIndent">
+        <properties>
+        <property name="indent" value="4"/>
+        <property name="tabIndent" value="false"/>
+        </properties>
+    </rule>
+
+    <!-- 変数名をキャメルケースに -->
+    <rule ref="Squiz.NamingConventions.ValidVariableName.NotCamelCaps" />
+
+    <!-- 出力に色を適用 -->
+    <arg name="colors" />
+
+    <!-- オプション p:進捗表示  s:エラー表示時にルールを表示 -->
+    <arg value="ps" />
+
+    <!-- 除外ディレクトリ -->
+    <exclude-pattern>/database/</exclude-pattern>
+    <exclude-pattern>/node_modules/</exclude-pattern>
+    <exclude-pattern>/vendor/</exclude-pattern>
+    <exclude-pattern>/resources/</exclude-pattern>
+</ruleset>
