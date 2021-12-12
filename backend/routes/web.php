@@ -16,4 +16,8 @@ use App\Http\Controllers\UserController;
 
 Route::inertia('/', 'Welcome');
 
-Route::get('/user', [UserController::class, 'index']);
+Route::prefix('user')->name('user.')->group(function () {
+    Route::get('/', [UserController::class, 'index'])->name('index');
+    Route::post('/', [UserController::class, 'store'])->name('store');
+    Route::get('/create', [UserController::class, 'create'])->name('create');
+});
