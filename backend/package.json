@@ -21,6 +21,7 @@
     },
     "dependencies": {
         "@babel/preset-react": "^7.16.0",
+        "@emotion/react": "^11.7.0",
         "@hookform/resolvers": "^2.8.4",
         "@inertiajs/inertia": "^0.10.1",
         "@inertiajs/inertia-react": "^0.7.1",
