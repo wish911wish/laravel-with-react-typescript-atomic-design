@@ -11,6 +11,7 @@
     "baseUrl": "resources/js",
     "paths": {
       "@/*": ["*"]
-    }
+    },
+    "jsxImportSource": "@emotion/react"
   }
 }
