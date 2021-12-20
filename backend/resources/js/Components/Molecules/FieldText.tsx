@@ -27,7 +27,7 @@ const FieldText: React.FC<Props> = (props: Props) => {
 
   return (
     <div>
-      {props.label && <Label text={props.label} />}
+      {props.label && <Label text={props.label} for={props.name} />}
       <InputText value={value} name={props.name} onChange={(input: string) => setValue(input)} />
       <FormError text={props.error || ''} />
     </div>
