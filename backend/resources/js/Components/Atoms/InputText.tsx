@@ -1,10 +1,4 @@
-/** @jsxImportSource @emotion/react */
 import * as React from 'react'
-import { css } from '@emotion/react'
-
-const style = css({
-  fontSize: '24px',
-})
 
 type Props = {
   value: string
@@ -40,7 +34,6 @@ const InputText: React.FC<Props> = (props: Props) => {
       }}
       onFocus={props.onFocus}
       onBlur={props.onBlur}
-      css={style}
     />
   )
 }
