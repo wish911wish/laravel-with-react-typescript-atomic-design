@@ -37,3 +37,5 @@ destroy:
 	docker compose down --rmi all --volumes --remove-orphans
 destroy-volumes:
 	docker compose down --volumes --remove-orphans
+npm-watch:
+	docker compose exec web npm run watch
