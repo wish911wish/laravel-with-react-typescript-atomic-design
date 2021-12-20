@@ -16,7 +16,7 @@ class UserController extends Controller
     public function index(): Response
     {
         return Inertia::render('User/Index', [
-            'data' => User::all()->toArray()
+            'users' => User::all()
         ]);
     }
 
@@ -34,7 +34,6 @@ class UserController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-        dd($request->input());
         return redirect()->route('user.index');
     }
 }
